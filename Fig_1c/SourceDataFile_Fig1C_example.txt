@@ -1,0 +1,7 @@
+OA	Age	BMI	Sex	status
+Y	73	29.0	F	OA
+N	53	23.1	F	OA
+N	51	27.2	M	OA
+Y	62	19.3	M	OA
+N	51	31.4	M	OA
+N	70	28.5	F	OA

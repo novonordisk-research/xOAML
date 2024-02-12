@@ -1,0 +1,309 @@
+---
+title: "OA Waterfall Plots"
+author: "ZQAB"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+ html_document:
+   toc: yes
+   code_folding: show
+---
+
+<style>
+    body .main-container {
+        max-width: 2000px;
+    }
+</style>
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(cache = FALSE, message=FALSE, warning = FALSE, cache.lazy = FALSE,
+                      fig.width = 10, fig.height = 10)
+```
+
+```{r}
+#Load packages
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(tidyverse)
+library(xgboost)
+library(shapviz)
+```
+
+```{r}
+set.seed(432)
+```
+
+## Read in relevant data
+
+```{r}
+#Read in validation data
+validation <- 
+  fread("", header = T) 
+```
+
+```{r}
+#Read in xgb model
+xgb.model <- 
+  xgb.load("")
+
+```
+
+```{r}
+#Read in predicted probabilities
+pred <- 
+  fread("",header = T)
+```
+
+```{r}
+#Read in shap values
+shap_vals<-
+  fread("")
+
+#Annotate with eid
+shap_vals<-
+  bind_cols(pred %>%
+              select(eid),
+            shap_vals)
+```
+
+```{r}
+#Filter pred & shap values for people in Fold1
+pred<-
+  inner_join(pred,
+             validation %>%
+               select(eid), 
+             by= "eid")
+
+shap_vals<-
+  inner_join(shap_vals,
+             validation %>%
+               select(eid), 
+             by= "eid")
+```
+
+```{r}
+#Convert shap values to long data
+shap_vals_long<-
+  gather(shap_vals, feature, shap, 2:ncol(shap_vals))
+
+```
+
+### Cluster data
+
+```{r}
+#Read in clusters
+clusters<-
+  fread("")
+
+#Read in rules for clusters
+cluster_rules<-
+  fread("")
+```
+
+```{r}
+#Annotate cluster data with input data
+clusters_raw<-
+  left_join(clusters,
+            validation, 
+            by = "eid")
+```
+
+### Missing data adjustment
+
+```{r}
+#Convert validation to long data
+validation_long<-
+  gather(validation %>% select(-PHENOTYPE),
+         feature,
+         value,
+         2:ncol(validation %>% select(-PHENOTYPE)))
+
+#Create column for if missing data
+validation_long<-
+  validation_long %>%
+  mutate(missing= if_else(is.na(value),
+                          true = TRUE, 
+                          false = FALSE))
+```
+
+```{r}
+#Create ID for eid & feature 
+validation_long<-
+  validation_long %>%
+  mutate(eid_feature= paste(eid, feature, sep = "_"))
+
+shap_vals_long<-
+  shap_vals_long %>%
+  mutate(eid_feature= paste(eid, feature, sep = "_"))
+```
+
+```{r}
+#Filter out people with missing data from validation
+validation_long_complete<-
+  validation_long %>%
+  filter(missing == FALSE)
+```
+
+```{r}
+#Filter out people with missing data from shap
+shap_vals_long_complete<-
+  inner_join(shap_vals_long, 
+             validation_long %>%
+               filter(missing == FALSE) %>%
+               select(eid_feature),
+             by= "eid_feature")
+```
+
+```{r}
+#Recalculate predicted probability
+pred_noNA<-
+  shap_vals_long_complete %>%
+  group_by(eid) %>%
+  mutate(pred_noNA= 1/(1+exp(-(sum(shap) + 0)))) %>% #update with baseline
+  select(eid, pred_noNA) %>%
+  unique() %>%
+  left_join(.,
+            pred,
+            by= "eid")
+  
+  
+```
+
+## Plot waterfall plots
+
+```{r}
+#Create waterfall function
+plot_waterfall<-
+  function(patients){
+    
+#Subset validation data
+val_small <- 
+validation %>%
+filter(eid %in% patients[1:5]) %>%
+select(-eid, -PHENOTYPE)
+
+#Extract shap values
+shp <- 
+shapviz(xgb.model, 
+      X_pred = data.matrix(val_small), 
+      X = val_small)
+
+#Plot waterfall plots
+for(i in 1:5){
+  
+print(sv_waterfall(shp, 
+                   row_id = i,
+                   max_display = 10,
+                   show_annotation= FALSE) + 
+        ggtitle(paste(deparse(substitute(patients)), 
+                      "patient", 
+                      validation %>% 
+                        filter(eid %in% patients[1:5]) %>%
+                        dplyr::slice(i) %>%
+                        pull(eid), 
+                      sep = "_")) +
+  theme(axis.text=element_text(size=20),
+        axis.title=element_text(size=20),
+        plot.title = element_text(size=20)))
+
+}
+
+  }
+
+```
+
+```{r}
+#Create waterfall function for no missing data
+plot_waterfall_noNA<-
+  function(patients){
+    
+    for(i in patients[1:10]){
+      
+      patID<- i
+      
+      #Extract shap without missing values for patient
+      patID_shap<-
+        shap_vals_long_complete %>%
+        filter(eid == patID) %>%
+        select(-eid_feature) %>%
+        spread(., 
+               feature, shap) %>%
+        select(-eid) %>%
+        OA_feature_rename(.) %>%
+        as.matrix()
+      
+      #Extract raw values without missing values for patient
+      patID_validation<-
+        validation_long_complete %>%
+        filter(eid == patID) %>%
+        select(eid, feature, value) %>%
+        spread(., 
+               feature, value) %>%
+        select(-eid) %>%
+        OA_feature_rename(.)
+      
+      #Create shapviz object for plotting
+      shp<-
+        shapviz(patID_shap,
+                patID_validation,
+                baseline = 0)
+      
+      #Plot waterfall plot
+      print(sv_waterfall(shp, 
+                   row_id = 1,
+                   max_display = 15,
+                   show_annotation= FALSE) + 
+        ggtitle(paste("patient",
+                      patID, 
+                      sep = "_")) +
+        theme(axis.text=element_text(size=20),
+              axis.title=element_text(size=20),
+              plot.title = element_text(size=20)))
+      
+      rm(patID_shap)
+      rm(patID_validation)
+      rm(shp)
+      
+    }
+    
+  }
+```
+
+### Plot cluster examples
+
+```{r, eval=TRUE}
+for(i in (clusters_raw %>% arrange(cluster_ID)%>% pull(cluster_ID) %>% unique())){
+
+print(i)
+  
+#Extract cluster rule
+cluster_rule<-
+  cluster_rules %>% 
+           filter(cluster == i) %>%
+           pull(rules)
+
+cluster_rule<- gsub(" and ", " & ", cluster_rule)
+cluster_rule<- gsub("RAW_", "", cluster_rule)
+
+print(cluster_rule)
+
+#Filter for cluster who follow rule and high confidence OA patients
+OA_clus<-
+  clusters_raw %>%
+  filter(cluster_ID == i) %>%
+  filter_(cluster_rule) 
+
+print(inner_join(OA_clus[1:10,] %>% 
+                   select(eid),
+                 pred_noNA, 
+                 by= "eid"))
+  
+print(plot_waterfall(OA_clus$eid))
+print(plot_waterfall_noNA(OA_clus$eid))
+
+rm(cluster_rule)
+rm(OA_clus)
+
+}
+```
+

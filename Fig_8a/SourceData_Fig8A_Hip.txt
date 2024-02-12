@@ -1,0 +1,72 @@
+Var1	Freq
+Age	21660
+NSAIDs pre 1yrs	21660
+Walk pace	21660
+Hip circumference	21660
+BMI	21660
+Vitamin D	21660
+Urea	21660
+CRP	21660
+Health rating	21660
+Triglycerides	21660
+Total protein	21660
+NSAIDs pre 2yrs	21660
+Potassium	21660
+IGF-1	21660
+Phosphate	21660
+SHBG	21660
+Townsend deprivation index	21660
+Albumin	21660
+Alanine aminotransferase	21660
+Alkaline phosphatase	21660
+Number in household	21660
+HDL cholesterol	21660
+Hand grip strength (Right)	21660
+alcohol intake	21660
+Right leg (FM/FFM)	21660
+Total bilirubin	21660
+Sodium	21660
+Glucose	21660
+Lipoprotein A	21660
+Urate	21660
+Trunk (FM/FFM)	21660
+Creatinine blood	21660
+Gamma glutamyltransferase	21660
+Moderate activity	21660
+HbA1c	21660
+Creatinine urine	21660
+Apolipoprotein B	21660
+Whole body (FM/FFM)	21660
+Calcium	21660
+Left arm (FM/FFM)	21660
+Right arm (FM/FFM)	21660
+LDL Direct	21660
+Direct bilirubin	21660
+Cystatin C	21660
+Waist_circumference_0	21660
+Job (walking and/or standing)	21660
+NSAIDs pre 3yrs	21660
+Apolipoprotein A	21660
+Testosterone	21660
+Cholesterol	21660
+Aspartate aminotransferase	21660
+Left leg (FM/FFM)	21660
+O_levels_GCSEs	21660
+Hand grip strength (Left)	21660
+ethnicity.european_unrelated	21660
+College or University degree	21660
+Corticosteroids_value_pre_4yrs	21660
+Corticosteroids pre 2yrs	21660
+Job (heavy, manual and/or physical)	21660
+CSEs	21660
+Number_of_vehicles_in_household	21660
+Own_mortgage	21660
+Own_outright	21660
+Average total household income before tax	21660
+Public_transport	21660
+Car	21660
+Retired	21660
+Paid employment self employed	21660
+NSAIDs pre 4yrs	21660
+Age for full time education completion	21660
+Other_professional_qualifications	21660

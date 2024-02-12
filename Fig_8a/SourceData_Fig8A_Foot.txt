@@ -1,0 +1,60 @@
+Var1	Freq
+NSAIDs pre 1yrs	20010
+Age	20010
+Vitamin D	20010
+BMI	20010
+Hand grip strength (Left)	20010
+Paid employment self employed	20010
+Townsend deprivation index	20010
+Albumin	20010
+Car	20010
+Urea	20010
+Potassium	20010
+Cystatin C	20010
+Health rating	20010
+Aspartate aminotransferase	20010
+Total protein	20010
+Phosphate	20010
+Hand grip strength (Right)	20010
+Alkaline phosphatase	20010
+Average total household income before tax	20010
+Direct bilirubin	20010
+Glucose	20010
+Alanine aminotransferase	20010
+LDL Direct	20010
+Moderate activity	20010
+College or University degree	20010
+Testosterone	20010
+Right arm (FM/FFM)	20010
+Triglycerides	20010
+Sodium	20010
+Trunk (FM/FFM)	20010
+Apolipoprotein B	20010
+IGF-1	20010
+Left leg (FM/FFM)	20010
+Hip circumference	20010
+Total bilirubin	20010
+Gamma glutamyltransferase	20010
+Creatinine blood	20010
+CRP	20010
+SHBG	20010
+Whole body (FM/FFM)	20010
+Creatinine urine	20010
+Urate	20010
+Calcium	20010
+HbA1c	20010
+Number_of_vehicles_in_household	20010
+NSAIDs pre 2yrs	20010
+Right leg (FM/FFM)	20010
+ethnicity.european_unrelated	20010
+Lipoprotein A	20010
+Age for full time education completion	20010
+HDL cholesterol	20010
+Arm_Left_ratio_FM_FFM	20010
+Cholesterol	20010
+O_levels_GCSEs	20010
+Apolipoprotein A	20010
+Retired	20010
+Waist_circumference_0	20010
+Walk pace	20010
+alcohol_intake	20010

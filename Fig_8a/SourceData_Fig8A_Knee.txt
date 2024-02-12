@@ -1,0 +1,84 @@
+Var1	Freq
+BMI	24593
+Age	24593
+NSAIDs pre 1yrs	24593
+Vitamin D	24593
+Job (heavy, manual and/or physical)	24593
+Average total household income before tax	24593
+Walk pace	24593
+Moderate activity	24593
+NSAIDs pre 2yrs	24593
+Hip circumference	24593
+Urea	24593
+Townsend deprivation index	24593
+A levels	24593
+CRP	24593
+Health rating	24593
+IGF-1	24593
+Albumin	24593
+Creatinine blood	24593
+Hand grip strength (Left)	24593
+Job (walking and/or standing)	24593
+College or University degree	24593
+Phosphate	24593
+Gamma glutamyltransferase	24593
+Sodium	24593
+Hand grip strength (Right)	24593
+Alanine aminotransferase	24593
+SHBG	24593
+Triglycerides	24593
+Trunk (FM/FFM)	24593
+Potassium	24593
+HDL cholesterol	24593
+Aspartate aminotransferase	24593
+Cystatin C	24593
+Calcium	24593
+HbA1c	24593
+Waist circumference	24593
+Total protein	24593
+Alkaline phosphatase	24593
+Age for full time education completion	24593
+O levels GCSEs	24593
+Glucose	24593
+Direct bilirubin	24593
+Testosterone	24593
+Urate	24593
+Total bilirubin	24593
+Corticosteroids pre 3yrs	24593
+Left leg (FM/FFM)	24593
+alcohol intake	24593
+House_bungalow	24593
+Creatinine urine	24593
+LDL Direct	24593
+Apolipoprotein B	24593
+Cholesterol	24593
+Right leg (FM/FFM)	24593
+Lipoprotein A	24593
+NSAIDs pre 3yrs	24593
+Apolipoprotein A	24593
+Left arm (FM/FFM)	24593
+Right arm (FM/FFM)	24593
+Whole body (FM/FFM)	24593
+Paid employment self employed	24593
+Number in household	24593
+Walk	24593
+ethnicity.european_unrelated	24593
+NVQ_or_HND_or_HNC	24593
+CSEs	24593
+Number_of_vehicles_in_household	24593
+NSAIDs pre 5yrs	24593
+Corticosteroids pre 2yrs	24593
+Corticosteroids_value_pre_1yrs	24593
+Own_mortgage	24593
+Public_transport	24593
+NSAIDs pre 4yrs	24593
+Car	24593
+Own_outright	24593
+Corticosteroids_value_pre_5yrs	24593
+Other_professional_qualifications	24593
+Corticosteroids_value_pre_4yrs	24593
+Retired	24593
+Flat_maisonette_apartment	24593
+Job_shift	24593
+Sex	24593
+Rent_from_authority_council_association	24593

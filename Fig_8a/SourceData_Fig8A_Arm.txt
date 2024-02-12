@@ -1,0 +1,74 @@
+Var1	Freq
+Age	21304
+NSAIDs pre 1yrs	21304
+Hand grip strength (Right)	21304
+Vitamin D	21304
+Hand grip strength (Left)	21304
+Phosphate	21304
+Left leg (FM/FFM)	21304
+College or University degree	21304
+HbA1c	21304
+Calcium	21304
+Moderate activity	21304
+Job (heavy, manual and/or physical)	21304
+Townsend deprivation index	21304
+Glucose	21304
+BMI	21304
+Gamma glutamyltransferase	21304
+Triglycerides	21304
+Trunk (FM/FFM)	21304
+Average total household income before tax	21304
+Lipoprotein A	21304
+Health rating	21304
+Right leg (FM/FFM)	21304
+Creatinine urine	21304
+NSAIDs pre 2yrs	21304
+Total protein	21304
+Apolipoprotein A	21304
+Alkaline phosphatase	21304
+Alanine aminotransferase	21304
+CRP	21304
+Sodium	21304
+Cholesterol	21304
+Albumin	21304
+SHBG	21304
+Cystatin C	21304
+Total bilirubin	21304
+HDL cholesterol	21304
+NSAIDs pre 5yrs	21304
+Testosterone	21304
+Potassium	21304
+Urea	21304
+Number in household	21304
+Creatinine_blood	21304
+Number_of_vehicles_in_household	21304
+Aspartate_aminotransferase	21304
+Waist_circumference_0	21304
+NSAIDs pre 4yrs	21304
+IGF-1	21304
+Apolipoprotein_B	21304
+Direct_bilirubin	21304
+Urate	21304
+LDL_direct	21304
+Retired	21304
+Paid_employment_self_employed	21304
+Whole body (FM/FFM)	21304
+Corticosteroids_value_pre_1yrs	21304
+NSAIDs pre 3yrs	21304
+Arm_Left_ratio_FM_FFM	21304
+Corticosteroids pre 2yrs	21304
+alcohol_intake	21304
+Sex	21304
+Hip circumference	21304
+Public_transport	21304
+Job (walking and/or standing)	21304
+Right arm (FM/FFM)	21304
+Car	21304
+Flat_maisonette_apartment	21304
+House_bungalow	21304
+A levels	21304
+NVQ_or_HND_or_HNC	21304
+Age for full time education completion	21304
+Own_outright	21304
+O_levels_GCSEs	21304
+ethnicity.european_unrelated	21304

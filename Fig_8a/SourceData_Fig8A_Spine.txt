@@ -1,0 +1,77 @@
+Var1	Freq
+NSAIDs pre 1yrs	21216
+Age	21216
+Health rating	21216
+College or University degree	21216
+Average total household income before tax	21216
+Vitamin D	21216
+Age for full time education completion	21216
+HbA1c	21216
+Hand grip strength (Right)	21216
+BMI	21216
+Urea	21216
+Right arm (FM/FFM)	21216
+Albumin	21216
+Alanine aminotransferase	21216
+Urate	21216
+Creatinine blood	21216
+Hand grip strength (Left)	21216
+Apolipoprotein A	21216
+IGF-1	21216
+Townsend deprivation index	21216
+NSAIDs pre 3yrs	21216
+Phosphate	21216
+Gamma glutamyltransferase	21216
+NSAIDs pre 5yrs	21216
+Glucose	21216
+Total protein	21216
+Potassium	21216
+Alkaline phosphatase	21216
+A levels	21216
+Paid employment self employed	21216
+Left arm (FM/FFM)	21216
+Left leg (FM/FFM)	21216
+SHBG	21216
+NSAIDs pre 2yrs	21216
+Right leg (FM/FFM)	21216
+Creatinine urine	21216
+Calcium	21216
+Triglycerides	21216
+Lipoprotein A	21216
+Total bilirubin	21216
+Trunk (FM/FFM)	21216
+LDL Direct	21216
+Corticosteroids pre 2yrs	21216
+Whole body (FM/FFM)	21216
+NSAIDs pre 4yrs	21216
+Sodium	21216
+Number in household	21216
+Direct bilirubin	21216
+Aspartate aminotransferase	21216
+Testosterone	21216
+Cystatin C	21216
+Corticosteroids_value_pre_1yrs	21216
+Apolipoprotein B	21216
+CRP	21216
+Walk pace	21216
+HDL cholesterol	21216
+Waist circumference	21216
+Cholesterol	21216
+Corticosteroids pre 3yrs	21216
+Moderate activity	21216
+Own_mortgage	21216
+Job (heavy, manual and/or physical)	21216
+Corticosteroids_value_pre_4yrs	21216
+Hip circumference	21216
+alcohol intake	21216
+ethnicity.european_unrelated	21216
+NVQ_or_HND_or_HNC	21216
+Job (walking and/or standing)	21216
+Own_outright	21216
+Car	21216
+Number_of_vehicles_in_household	21216
+Other_professional_qualifications	21216
+O levels GCSEs	21216
+Retired	21216
+Walk	21216
+Job_shift	21216
